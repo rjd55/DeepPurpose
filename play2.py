@@ -1,4 +1,8 @@
-from DeepPurpose import utils, models, dataset
+from DeepPurpose import DTI as models
+from DeepPurpose.utils import *
+from DeepPurpose.dataset import *
+
+#from DeepPurpose import utils, models, dataset
 
 X_drugs, X_targets, y = dataset.load_process_DAVIS(path = './data', binary = False, convert_to_log = True, threshold = 30)
 print('Drug 1: ' + X_drugs[0])
