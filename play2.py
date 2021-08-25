@@ -1,11 +1,6 @@
-from DeepPurpose import oneliner
-from DeepPurpose import DTI as models
-from DeepPurpose.utils import *
-from DeepPurpose.dataset import *
+import os
+os.chdir('../')
 
-#from DeepPurpose import utils, models, dataset
+from DeepPurpose import utils, DTI, dataset
 
-X_drugs, X_targets, y = DeepPurpose.dataset.load_process_DAVIS(path = './data', binary = False, convert_to_log = True, threshold = 30)
-print('Drug 1: ' + X_drugs[0])
-print('Target 1: ' + X_targets[0])
-print('Score 1: ' + str(y[0]))
+dataset
