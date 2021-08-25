@@ -1,3 +1,4 @@
+from DeepPurpose import oneliner
 from DeepPurpose import DTI as models
 from DeepPurpose.utils import *
 from DeepPurpose.dataset import *
