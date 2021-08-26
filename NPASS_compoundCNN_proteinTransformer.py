@@ -1,6 +1,8 @@
 import os
 os.chdir('../')
-
+import DeepPurpose.DTI as models
+from DeepPurpose.utils import *
+from DeepPurpose.dataset import *
 from DeepPurpose import utils, dataset
 import DeepPurpose.DTI as models
 
