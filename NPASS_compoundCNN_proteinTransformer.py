@@ -18,7 +18,7 @@ drug_encoding = 'CNN'
 target_encoding = 'Transformer'
 train, val, test = data_process(X_drugs, X_targets, y, 
                                 drug_encoding, target_encoding, 
-                                split_method='random',frac=[0.854, 0.096, 0.05])
+                                split_method='random',frac=[0.7,0.1,0.2])
 
 # use the parameters setting provided in the paper: https://arxiv.org/abs/1801.10193
 config = generate_config(drug_encoding = drug_encoding, 
