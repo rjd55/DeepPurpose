@@ -1,9 +1,8 @@
 import os
 os.chdir('../')
 
+from DeepPurpose import utils, dataset
 import DeepPurpose.DTI as models
-from DeepPurpose.utils import *
-from DeepPurpose.dataset import *
 
 from time import time
 
