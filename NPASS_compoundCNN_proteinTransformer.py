@@ -16,7 +16,7 @@ X_drugs, X_targets, y = dataset.read_file_training_dataset_drug_target_pairs(pat
 
 drug_encoding = 'CNN'
 target_encoding = 'Transformer'
-train, val, test = data_process(X_drug, X_target, y, 
+train, val, test = data_process(X_drugs, X_targets, y, 
                                 drug_encoding, target_encoding, 
                                 split_method='random',frac=[0.854, 0.096, 0.05])
 
