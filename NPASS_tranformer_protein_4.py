@@ -42,4 +42,4 @@ t2 = time()
 print("cost about " + str(int(t2-t1)) + " seconds")
 model.train(train, val, test)
 
-model.save_model('./model_CNN_Transformer_NPASS_4')
+model.save_model('./NPASS_tranformer_protein_4')
