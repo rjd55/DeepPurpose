@@ -14,6 +14,10 @@ path_to_text_file = '/content/drive/MyDrive/Colab Notebooks/data/NPASS_for_DeepP
 
 X_drugs, X_targets, y = dataset.read_file_training_dataset_drug_target_pairs(path_to_text_file)
 
+print(X_drugs[:5])
+print(X_targets[:5])
+print(y[:5])
+
 drug_encoding = 'CNN'
 target_encoding = 'CNN'
 train, val, test = data_process(X_drugs, X_targets, y, 
