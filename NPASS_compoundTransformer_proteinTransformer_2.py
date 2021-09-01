@@ -47,12 +47,4 @@ model.train(train, val, test)
 
 model.save_model('/content/drive/MyDrive/Colab Notebooks/models/NPASS_compoundTransformer_proteinTransformer_2')
 
-                        )
-
-
-model = models.model_initialize(**config)
-t2 = time()
-print("cost about " + str(int(t2-t1)) + " seconds")
-model.train(train, val, test)
-
-model.save_model('/content/drive/MyDrive/Colab Notebooks/models/NPASS_compoundTransformer_proteinTransformer_2')
+                    
