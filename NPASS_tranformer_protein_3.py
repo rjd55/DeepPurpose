@@ -35,7 +35,9 @@ config = generate_config(drug_encoding = drug_encoding,
                          hidden_dim_drug = 128,
                          cnn_drug_filters = [32,64,96],
                          cnn_drug_kernels = [4,6,8],
-                         transformer_n_layer_target = 2
+                         transformer_n_layer_target = 2,
+                         result_folder = "/content/drive/MyDrive/Colab Notebooks/DeepPurpose_results/NPASS_tranformer_protein_3"
+                         
                         )
 model = models.model_initialize(**config)
 t2 = time()
