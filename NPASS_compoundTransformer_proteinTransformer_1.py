@@ -32,7 +32,7 @@ config = generate_config(drug_encoding = drug_encoding,
                          batch_size = 32, 
                          hidden_dim_drug = 128,
                          transformer_n_layer_target = 2,
-                         transformer_n_layer_drug = 8 #basic setting,
+                         transformer_n_layer_drug = 8,
                          result_folder = "/content/drive/MyDrive/Colab Notebooks/DeepPurpose_results/NPASS_compoundTransformer_proteinTransformer_1"
                          
                          
