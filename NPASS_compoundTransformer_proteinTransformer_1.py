@@ -33,7 +33,7 @@ config = generate_config(drug_encoding = drug_encoding,
                          hidden_dim_drug = 128,
                          transformer_n_layer_target = 2,
                          transformer_n_layer_drug = 8 #basic setting,
-                         result_folder = "/content/drive/MyDrive/Colab Notebooks/DeepPurpose_results/NPASS_compoundTransformer_proteinTransformer_1",
+                         result_folder = "/content/drive/MyDrive/Colab Notebooks/DeepPurpose_results/NPASS_compoundTransformer_proteinTransformer_1"
                          
                          
                     
@@ -47,12 +47,4 @@ model.train(train, val, test)
 
 model.save_model('/content/drive/MyDrive/Colab Notebooks/models/NPASS_compoundTransformer_proteinTransformer_1')
 
-                        )
-
-
-model = models.model_initialize(**config)
-t2 = time()
-print("cost about " + str(int(t2-t1)) + " seconds")
-model.train(train, val, test)
-
-model.save_model('/content/drive/MyDrive/Colab Notebooks/models/NPASS_compoundTransformer_proteinTransformer_1')
+                        
