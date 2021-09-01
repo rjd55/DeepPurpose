@@ -41,4 +41,4 @@ t2 = time()
 print("cost about " + str(int(t2-t1)) + " seconds")
 model.train(train, val, test)
 
-model.save_model('./NPASS_compoundTransformer_proteinCNN_3')
+model.save_model('/content/drive/MyDrive/Colab Notebooks/models/NPASS_compoundTransformer_proteinCNN_3')
