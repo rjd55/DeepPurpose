@@ -22,18 +22,20 @@ drug_encoding = 'Transformer'
 target_encoding = 'Transformer'
 train, val, test = data_process(X_drugs, X_targets, y, 
                                 drug_encoding, target_encoding, 
-                                split_method='random',frac=[0.85,0.1,0.05])
+                                split_method='random',frac=[0.85,0.1,0.05],random_seed=2)
 
 config = generate_config(drug_encoding = drug_encoding, 
                          target_encoding = target_encoding, 
                          cls_hidden_dims = [1024,1024,512], 
                          train_epoch = 100, 
                          LR = 0.001, 
-                         batch_size = 32,   
+                         batch_size = 32, 
+                         hidden_dim_drug = 128,
                          transformer_n_layer_target = 2,
                          transformer_n_layer_drug = 8 #basic setting,
                          result_folder = "/content/drive/MyDrive/Colab Notebooks/DeepPurpose_results/NPASS_compoundTransformer_proteinTransformer_1",
-                         transformer_num_attention_heads_drug = 16
+                         
+                         
                     
                         )
 
