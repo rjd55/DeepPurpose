@@ -26,6 +26,7 @@ from DeepPurpose.model_helper import Encoder_MultipleLayers, Embeddings
 from DeepPurpose.encoders import *
 
 from torch.utils.tensorboard import SummaryWriter
+import dgllife
 
 class Classifier(nn.Sequential):
 	def __init__(self, model_drug, model_protein, **config):
