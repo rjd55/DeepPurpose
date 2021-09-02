@@ -1,8 +1,3 @@
-!pip install dgllife
-import dgllife
-
-print(dgllife.__version__)
-
 import os
 os.chdir('../')
 import DeepPurpose.DTI as models
