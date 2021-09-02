@@ -4,10 +4,6 @@ import DeepPurpose.DTI as models
 from DeepPurpose.utils import *
 from DeepPurpose.dataset import *
 from DeepPurpose import utils, dataset
-#from DeepPurpose import CompoundPred as models
-#from tdc import BenchmarkGroup
-#group = BenchmarkGroup(name = 'ADMET_Group', path = 'data/')
-
 import warnings
 warnings.filterwarnings("ignore")
 
