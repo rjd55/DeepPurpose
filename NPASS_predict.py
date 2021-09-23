@@ -11,8 +11,10 @@ from time import time
 t1 = time()
 
 
-path = utils.download_pretrained_model('/content/drive/MyDrive/Colab Notebooks/models/DeepPurpose_IC50_models/NPASS_tranformer_protein_1')
-net = models.model_pretrained(path_dir = path)
+#path = utils.download_pretrained_model('/content/drive/MyDrive/Colab Notebooks/models/DeepPurpose_IC50_models/NPASS_tranformer_protein_1')
+#net = models.model_pretrained(path_dir = path)
 
-
+path = '/content/drive/MyDrive/Colab Notebooks/models/DeepPurpose_IC50_models/NPASS_tranformer_protein_1'
+net = models.load_pretrained(path)
 net.config
+print(net.config)
