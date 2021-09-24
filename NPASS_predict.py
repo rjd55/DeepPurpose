@@ -33,8 +33,7 @@ X_pred = utils.data_process(smiles, target_sequence, labels,
 y_pred = model.predict(X_pred)
 
 df = pd.DataFrame(y_pred)
-df.to_csv('deeppurpose_IC50_predictions.csv')
-!cp deeppurpose_IC50_predictions.csv "/content/drive/MyDrive/Colab Notebooks/data"
+df.to_csv('/content/drive/MyDrive/Colab Notebooks/data/deeppurpose_IC50_predictions.csv')
 
 print('The predicted score is ' + str(y_pred))
 print(len(y_pred))
