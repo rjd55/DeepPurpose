@@ -9,6 +9,7 @@ X_drugs, X_targets, y = dataset.read_file_training_dataset_drug_target_pairs(pat
 
 print('type X_drugs: ' + str(type(X_drugs)))
 print('type X_targets: ' + str(type(X_targets)))
+print('type y: ' + str(type(y)))
 
 print('There are ' + str(len(X_drugs)) + ' drug-target pairs.')
 print(X_drugs[:5])
