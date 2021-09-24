@@ -14,7 +14,7 @@ t1 = time()
 #path = utils.download_pretrained_model('/content/drive/MyDrive/Colab Notebooks/models/DeepPurpose_IC50_models/NPASS_tranformer_protein_1')
 #net = models.DBTA.model_pretrained(path_dir = path)
 
-path = '/content/drive/MyDrive/Colab Notebooks/models/DeepPurpose_IC50_models/NPASS_tranformer_protein_1'
-model = models.DBTA.load_pretrained(path)
+#path = '/content/drive/MyDrive/Colab Notebooks/models/DeepPurpose_IC50_models/NPASS_tranformer_protein_1'
+model = models.DBTA.load_pretrained('/content/drive/MyDrive/Colab Notebooks/models/DeepPurpose_IC50_models/NPASS_tranformer_protein_1')
 model.config
 print(model.config)
