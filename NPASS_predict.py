@@ -15,7 +15,7 @@ test_df = pd.read_csv(test_df_path, error_bad_lines=False, encoding="Latin-1" )
 print(len(test_df))
 
 smiles = list(test_df['SMILES'])
-Target_sequence = list(test_df['Target_sequence'])
+target_sequence = list(test_df['Target_sequence'])
 labels = list(test_df['log_IC50'])
 
 
