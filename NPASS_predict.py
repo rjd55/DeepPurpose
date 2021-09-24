@@ -15,6 +15,6 @@ t1 = time()
 #net = models.model_pretrained(path_dir = path)
 
 path = '/content/drive/MyDrive/Colab Notebooks/models/DeepPurpose_IC50_models/NPASS_tranformer_protein_1'
-net = models.load_pretrained(path)
-net.config
-print(net.config)
+model = models.load_pretrained(path)
+model.config
+print(model.config)
