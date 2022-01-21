@@ -20,6 +20,8 @@ print(y[:5])
 
 drug_encoding = 'CNN'
 target_encoding = 'Transformer'
+
+
 #train, val, test = data_process(X_drugs, X_targets, y, 
 #                                drug_encoding, target_encoding, 
 #                                split_method='random',frac=[0.85,0.1,0.05], random_seed = 2)
@@ -29,6 +31,7 @@ train, val, test = data_process(X_drugs, X_targets, y,
 print(type(train))
 print(type(val))
 print(type(test))
+print(train.head())
 
 # use the parameters setting provided in the paper: https://arxiv.org/abs/1801.10193
 config = generate_config(drug_encoding = drug_encoding, 
