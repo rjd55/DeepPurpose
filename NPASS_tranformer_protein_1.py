@@ -1,4 +1,4 @@
-mport os
+import os
 os.chdir('../')
 import DeepPurpose.DTI as models
 from DeepPurpose.utils import *
