@@ -1,11 +1,11 @@
-import os
+mport os
 os.chdir('../')
 import DeepPurpose.DTI as models
 from DeepPurpose.utils import *
 from DeepPurpose.dataset import *
 from DeepPurpose import utils, dataset
 import DeepPurpose.DTI as models
-
+import random
 from time import time
 
 t1 = time()
@@ -21,23 +21,20 @@ print(y[:5])
 drug_encoding = 'CNN'
 target_encoding = 'Transformer'
 
-
-#train, val, test = data_process(X_drugs, X_targets, y, 
-#                                drug_encoding, target_encoding, 
-#                                split_method='random',frac=[0.85,0.1,0.05], random_seed = 2)
+x = random.randint(1, 1000000000000)
 
 train, val, test = data_process(X_drugs, X_targets, y, 
-                                drug_encoding, target_encoding, frac=[0.85,0.1,0.05])
-print(type(train))
-print(type(val))
-print(type(test))
-print(train.head())
+                                drug_encoding, target_encoding, 
+                                split_method='random',frac=[0.85,0.1,0.05], random_seed = x)
+
+
+
 
 # use the parameters setting provided in the paper: https://arxiv.org/abs/1801.10193
 config = generate_config(drug_encoding = drug_encoding, 
                          target_encoding = target_encoding, 
                          cls_hidden_dims = [1024,1024,512], 
-                         train_epoch = 1, 
+                         train_epoch = 100, 
                      #    test_every_X_epoch = 100, 
                          LR = 0.001, 
                          batch_size = 32,
