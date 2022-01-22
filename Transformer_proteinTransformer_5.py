@@ -5,7 +5,7 @@ from DeepPurpose.utils import *
 from DeepPurpose.dataset import *
 from DeepPurpose import utils, dataset
 import DeepPurpose.DTI as models
-
+import random
 from time import time
 
 t1 = time()
@@ -20,9 +20,12 @@ print(y[:5])
 
 drug_encoding = 'Transformer'
 target_encoding = 'Transformer'
+
+x = random.randint(1, 4294967295)
+
 train, val, test = data_process(X_drugs, X_targets, y, 
                                 drug_encoding, target_encoding, 
-                                split_method='random',frac=[0.85,0.1,0.05])
+                                split_method='random',frac=[0.85,0.1,0.05], random_seed = x)
 
 config = generate_config(drug_encoding = drug_encoding, 
                          target_encoding = target_encoding, 
@@ -32,8 +35,7 @@ config = generate_config(drug_encoding = drug_encoding,
                          batch_size = 32, 
                          test_every_X_epoch = 10,
                          hidden_dim_drug = 128,
-                         mpnn_hidden_size = 128,
-                         mpnn_depth = 3, 
+                         transformer_n_layer_target = 2,
                          result_folder = "/content/drive/MyDrive/Colab Notebooks/DeepPurpose_results/NPASS_compoundTransformer_proteinTransformer_5"
                                       
                         )
