@@ -21,7 +21,7 @@ print(y[:5])
 drug_encoding = 'CNN'
 target_encoding = 'Transformer'
 
-x = random.randint(1, 1000000000000)
+x = random.randint(1, 4294967295)
 
 train, val, test = data_process(X_drugs, X_targets, y, 
                                 drug_encoding, target_encoding, 
