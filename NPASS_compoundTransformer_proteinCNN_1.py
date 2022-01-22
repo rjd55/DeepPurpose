@@ -5,12 +5,12 @@ from DeepPurpose.utils import *
 from DeepPurpose.dataset import *
 from DeepPurpose import utils, dataset
 import DeepPurpose.DTI as models
-
+import random
 from time import time
 
 t1 = time()
 
-path_to_text_file = '/content/drive/MyDrive/Colab Notebooks/data/NPASS_for_DeepPurpose.txt'
+path_to_text_file = '/content/drive/MyDrive/Colab Notebooks/data/NPASS_for_DeepPurpose_kd.txt'
 
 X_drugs, X_targets, y = dataset.read_file_training_dataset_drug_target_pairs(path_to_text_file)
 
@@ -20,9 +20,12 @@ print(y[:5])
 
 drug_encoding = 'Transformer'
 target_encoding = 'CNN'
+
+x = random.randint(1, 4294967295)
+
 train, val, test = data_process(X_drugs, X_targets, y, 
                                 drug_encoding, target_encoding, 
-                                split_method='random',frac=[0.85,0.1,0.05])
+                                split_method='random',frac=[0.85,0.1,0.05], random_seed = x)
 
 config = generate_config(drug_encoding = drug_encoding, 
                          target_encoding = target_encoding, 
@@ -30,6 +33,7 @@ config = generate_config(drug_encoding = drug_encoding,
                          train_epoch = 100, 
                          LR = 0.001, 
                          batch_size = 32,
+                         hidden_dim_drug = 128,
                          cnn_target_filters = [32,64,96],
                          cnn_target_kernels = [4,8,12],
                          result_folder = "/content/drive/MyDrive/Colab Notebooks/DeepPurpose_results/NPASS_compoundTransformer_proteinCNN_1"
