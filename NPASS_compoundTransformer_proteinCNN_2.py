@@ -38,8 +38,8 @@ config = generate_config(drug_encoding = drug_encoding,
 
 
 model = models.model_initialize(**config)
+
+model.train(train, val, test)
 t2 = time()
 print("cost about " + str(int(t2-t1)) + " seconds")
-model.train(train, val, test)
-
 model.save_model('/content/drive/MyDrive/Colab Notebooks/models/NPASS_compoundTransformer_proteinCNN_2')
