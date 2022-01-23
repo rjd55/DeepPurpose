@@ -30,9 +30,9 @@ config = generate_config(drug_encoding = drug_encoding,
                          train_epoch = 100, 
                          LR = 0.001, 
                          batch_size = 32,
+                         hidden_dim_drug = 128,
                          cnn_target_filters = [32,64,96],
                          cnn_target_kernels = [4,8,12],
-                         transformer_num_attention_heads_drug = 16,
                          result_folder = "/content/drive/MyDrive/Colab Notebooks/DeepPurpose_results/NPASS_compoundTransformer_proteinCNN_2"
                         )
 
