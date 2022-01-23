@@ -33,15 +33,12 @@ config = generate_config(drug_encoding = drug_encoding,
                          train_epoch = 100,
                          test_every_X_epoch = 10,
                          LR = 0.001, 
-                         batch_size = 32, 
-                         hidden_dim_drug = 128,
-                         transformer_n_layer_target = 2,
+                         batch_size = 32,
                          hidden_dim_drug = 128,
                          transformer_n_layer_target = 2,
                          result_folder = "/content/drive/MyDrive/Colab Notebooks/DeepPurpose_results/NPASS_compoundTransformer_proteinTransformer_4"
                          
-                         
-                    
+                                       
                         )
 
 
