@@ -15,8 +15,8 @@ test_df = pd.read_csv(test_df_path, error_bad_lines=False, encoding="Latin-1" )
 print(len(test_df))
 
 smiles = list(test_df['SMILES'])
-target_sequence = list(test_df['Target'])
-labels = list(test_df['log_labels'])
+target_sequence = list(test_df['Target_sequence'])
+labels = list(test_df['log_kd'])
 
 
 model = models.model_pretrained(path_dir = '/content/drive/MyDrive/Colab Notebooks/models/DeepPurpose_Kd_models/NPASS_tranformer_protein_1')
