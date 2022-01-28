@@ -15,8 +15,11 @@ test_df = pd.read_csv(test_df_path, error_bad_lines=False, encoding="Latin-1" )
 print(len(test_df))
 
 smiles = list(test_df['SMILES'])
+print("There are "+str(len(smiles))+" SMILES")
 target_sequence = list(test_df['Target_sequence'])
+print("There are "+str(len(target_sequence))+" target_sequence")
 labels = list(test_df['log_IC50'])
+print("There are "+str(len(labels))+" labels")
 
 
 model = models.model_pretrained(path_dir = '/content/drive/MyDrive/Colab Notebooks/models/DeepPurpose_IC50_models/NPASS_tranformer_protein_1')
